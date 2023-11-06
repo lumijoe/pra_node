@@ -18,3 +18,28 @@ npm install -g nodemon
          "dev": "nodemon server.js" 
     },
 ## 以降の実行をnpm run devにすると＝nodemon server.jsと同義になる
+まだエラーが出る場合は一旦
+・npm uninstall nodemon
+・sudo npm install -g --force nodemonで実行
+・package.jsonファイルのコードのscriptsの中身を下記に上書きする(nodemonにする)
+    "scripts": {
+         "dev": "nodemon server.js" 
+    },
+でhtmlを変更してみる前に
+・npm run devを実行してみてから
+・htmlコードを変更して
+> pra_node@1.0.0 dev /Users/lumi/Desktop/pra_node
+> nodemon server.js
+
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node server.js`
+server3001のテストとなるので
+、server.jsファイルに映ってからわざわざ保存すると
+[nodemon] restarting due to changes...
+[nodemon] starting `node server.js`
+server3001のテストとなるので、
+・ローカルホスト3001でリロードすると変更が効く。
+・開発効率の良いモジュール
