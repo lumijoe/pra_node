@@ -1,0 +1,20 @@
+## 初期設定
+・npm init -y　初期化し、package.jsonを作成するコマンド
+・npm install --save-dev http　package-lock.jsonを作成するコマンド
+・package.jsonファイルのコードのscriptsの中身を下記に上書きすると
+    "scripts": {
+         "dev": "node server.js"
+    },
+・npm run devは、コマンドラインでnode server.jsエンターと同義になる
+・Node.js公式ドキュメントhttps://nodejs.org/api/http.html#http
+
+## リロード機能モジュール(コード変更してctrl+c後のlocalhostのリロードの手間を省く)導入
+npm install -g nodemon
+で実行エラーが出れば管理者権限として　sudo npm install -g nodemon　で実行
+成功したら
+初期設定で設定したpackage.jsonをさらに上書きする
+・package.jsonファイルのコードのscriptsの中身を下記に上書きする(nodemonにする)
+    "scripts": {
+         "dev": "nodemon server.js" 
+    },
+## 以降の実行をnpm run devにすると＝nodemon server.jsと同義になる
